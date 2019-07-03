@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if语句</title>
+    <script type="text/javascript">
+        /**
+         * if 语句
+         *      语法二：
+         *          if（条件表达式）{
+         *              语句...
+         *          }else{
+         *              语句...
+         *          }
+         *
+         *  if...else...语句
+         *      当该语句执行时，会先对if后的条件表达式求值判断；
+         *         如果该值为true，则执行if后面的语句
+         *         如果该值为false，则执行else后面的语句
+         *  语法三：
+         *      if（条件表达式）{
+         *          语句...
+         *      }else if（条件表达式）{
+         *          语句...
+         *      }else if（条件表达式）{
+         *          语句...
+         *      }else{
+         *          语句...
+         *      }
+         *
+         *      if...else if...else
+         *           当该表达式执行时，会从上到下一次对条件表达式进行求职判断
+         *           如果值为true，则执行当前语句
+         *           如果为false，则继续向下判断
+         *
+         *
+         *
+         */
+        var age = 101;
+
+        /*if(age >= 60){
+            alert("你已经退休了");
+        }else{
+            alert("你还没退休~~~~");
+        }*/
+
+        if(age > 100){
+            alert("活着真没意思");
+        }else if(age > 80){
+            alert("你也老大不小的了~~~");
+        }else if(age > 60){
+            alert("你也退休了");
+
+        }else if(age > 30){
+            alert("你已经中年了");
+        }else if(age > 17){
+            alert("你已经成年了");
+
+        }else{
+            alert("你还是个小孩子");
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
