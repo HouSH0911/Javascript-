@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>while练习</title>
+    <script type="text/javascript">
+        /*
+            假设投资的年利率是5%，试求从1000增长到5000，需要花费多少年
+
+            1000  1000*1.05
+            1050  1050*1.05
+
+         */
+         var m = 1000;
+         /*//第一年的钱数
+         m *= 1.05;
+         //第二年的钱数
+
+         m *=1.05;
+         //定义一个计数器*/
+         var count = 0;
+         //定义一个while循环来计算每年的钱数
+         while(m < 5000){
+             m = m*1.05
+             count++;
+
+         }
+         console.log(m);
+         console.log("一共需要"+count+"年")
+    </script>
+</head>
+<body>
+
+</body>
+</html>
