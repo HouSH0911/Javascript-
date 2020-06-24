@@ -1,0 +1,14 @@
+表格
+1、<th></th>标签表示的是表格的标题，通常在表格的第一行的每一列或者第一列的每一行使用
+2、colspan、rowspan属性是合并单元格使用的，
+	colspan是合并行、rowspan是合并列
+3、<colgroup>  //可以通过此标签设置每一列的样式
+    <col>   //第一列什么属性都没有
+    <col style="background-color: yellow">  //第二列背景颜色为黄色
+  </colgroup>  //一般此标签放在table标签下面 所有单元格标签前面
+4、	<colgroup>
+  		<col style="background-color: yellow" span="2">  //span表示这个效果应用到表格中多少列
+	</colgroup>
+5、<table><caption>表格标题</caption></table> caption标签可以为表格添加一个标题
+6、scope可以让某一列或者某一行关联更紧密，相当于添加注释
+	他拥有的属性有：row  col  colgroup 

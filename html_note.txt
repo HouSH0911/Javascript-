@@ -1,0 +1,29 @@
+1、引用
+  <q cite="http://www.affirmationsforpositivethinking.com/">不要说泄气的话</q>。
+  q标签会让那句话带有双引号  “不要说泄气的话”
+2、<b></b> 加粗
+  <u></u> 下划线
+  <i></i> 斜体字
+3、<abbr title="美国国家航空航天局（National Aeronautics and Space Administration）">NASA</abbr>
+   当鼠标放在NASA上时会出现 国国家航空航天局（National Aeronautics and Space Administration） 字样
+4、<dl>
+	<dt>一级标题</dt>
+		<dd> 正文 </dd>
+	<dt> 一级标题 </dt>
+		<dd>正文</dd>
+  </dl>
+5、<address> </address> 用来标记联系方式
+6、<sub></sub>  下标
+  <sup></sup> 上标
+7、<code>: 用于标记计算机通用代码。
+  <pre>: 用于保留空白字符（通常用于代码块）——如果您在文本中使用缩进或多余的空白，浏览器将忽略它，您将不会在呈现的页面上看到它。但是，如果您将文本包含在<pre></pre>标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。
+  <var>: 用于标记具体变量名。
+  <kbd>: 用于标记输入电脑的键盘（或其他类型）输入。
+  <samp>: 用于标记计算机程序的输出。
+8、<time datatime=""> </time> 标记日期和时间
+9、<header>：页眉。
+	<nav>：导航栏。
+	<main>：主内容。主内容中还可以有各种子内容区段，可用<article>、<section> 和 <div> 等元素表示。
+	<aside>：侧边栏，经常嵌套在 <main> 中。
+	<footer>：页脚。
+10、

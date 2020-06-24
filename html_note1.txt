@@ -1,0 +1,104 @@
+1、图片的<img> 标签里面的alt属性当图片显示不出来时会显示alt的内容
+	title属性会在鼠标悬停在图片上时显示title的内容
+2、<figure>
+		<figuration>
+			可以为figure里面的内容提供更好的说明文字
+		</figuration>
+   </figure>
+3、css添加图片可以使用background-image:url("");但是这个图片只是作为装饰用，不做内容
+4、<vedio src="" controls></vedio> controls属性代表该视频可控，可以设置一些参数（进度、音量等）
+   <vedio>
+   		<source src="123.mp4" type="vedio/mp4">
+   		<source src="123.webm" type="vedio/webm">
+   	</vedio>
+   	这样写浏览器就不用花时间寻找合适的格式编码去解码视频了，会自动检查source标签里的type属性
+   	避免消耗掉大量的时间和资源。
+5、<vedio></vedio>的其他属性
+	width和height控制视频的尺寸
+	autoplay 会使视频个音频的内容立即播放，自动播放
+	loop 使视频循环播放
+	muted 视频播放时，默认关闭声音
+	poster 指向了一个图像的URL， 这个图像会在视频播放前显示，用于粗略的预览该视频
+	preload 用于缓冲较大的文件，有3个值可选
+		none：不缓冲
+		auto：页面加载后缓存媒体文件
+		metadata：仅缓冲文件的元数据
+<video controls width="400" height="400"
+       autoplay loop muted
+       poster="poster.png"> </vedio>
+6、<audio></audio>是音频播放标签   与video标签相差不多，区别如下:
+	audio标签没有width和height属性，还有没有poster等视觉部件的属性
+7、在vedio标签中添加<track>标签，这个标签必须在所有source标签之后，使用 kind 属性来指明是哪
+      一种类型，如 subtitles 、 captions 、 descriptions。然后，使用 srclang 来告诉浏览器
+      你是用什么语言来编写的 subtitles。
+  <video controls>
+    	source src="example.mp4" type="video/mp4">
+    	<source src="example.webm" type="video/webm">
+    	<track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  </video>
+  相当于添加字幕
+8、<iframe>的基本元素：
+		allowfullscreen:可通过全屏api设置为全屏
+		frameborder="0|1" :0为无边框   1为有边框
+		sandbox：提高安全性设置
+9、<embed>标签的一些元素：
+		src  嵌入内容的地址
+		type  嵌入内容的媒体类型
+		height width 高度和宽度
+		<embed src="whoosh.swf" quality="medium"
+       		bgcolor="#ffffff" width="550" height="400"
+       		name="whoosh" align="middle" allowScriptAccess="sameDomain"
+       		allowFullScreen="false" type="application/x-shockwave-flash"
+       		pluginspage="http://www.macromedia.com/go/getflashplayer">
+  <object>标签的一些元素：
+  		data  嵌入内容的地址
+  		type  嵌入内容的媒体类型 object如果同时使用data和type属性时需要添加typemustmatch属性
+  		height width 
+  		<object data="mypdf.pdf" type="application/pdf"
+        	width="800" height="1200" typemustmatch>
+  			<p>You don't have a PDF plugin, but you can <a href="myfile.pdf">download the PDF file.</a></p>
+		</object>   //添加一个PDF文件
+10、<svg>标签
+		<svg version="1.1"
+     		baseProfile="full"
+     		width="300" height="200"
+     		xmlns="http://www.w3.org/2000/svg">
+  		<rect width="100%" height="100%" fill="black" />  //矩形黑色
+  		<circle cx="150" cy="100" r="90" fill="blue" />   //圆形蓝色
+  		<polygon points="120,0 240,200 0,225" fill="green"/>  //三角形绿色
+		</svg>
+11、可以通过<img>标签添加svg图形 ，也可以像上面那样添加svg图形
+		<img src="123.png" srcset="123.svg"> //对于不支持svg格式的浏览器可以添加srcset属性
+12、<iframe src="triangle.svg" width="500" height="500" sandbox>
+	</iframe>   //在iframe中添加SVG图像
+13、自适应的图片：分辨率切换：不同的尺寸
+	可以使用两个新的属性srcset和sizes 来提供额外的资源图像和提示
+	<img srcset="elva-fairy-320w.jpg 320w,
+             elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w"
+     	sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,  //当可视窗口的宽度是480像素或者更少时，填充槽的宽度为440px；
+            800px"
+     	src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+14、分辨率切换：利用srcset和x语法结合，来选择适当的分辨率的图片
+	<img srcset="elva-fairy-320w.jpg,
+             elva-fairy-480w.jpg 1.5x,
+             elva-fairy-640w.jpg 2x"
+     src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
+15、<picture></picture>标签
+	<picture>
+  		<source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+  		<source media="(min-width: 800px)" srcset="elva-800w.jpg">
+  		<img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+	</picture>
+	当media里面的条件为真时，就显示相应的srcset里面的图片
+	在任何情况下都必须在</picture>之前添加img标签，否则就不会有图片显示，当media的条件都不为真时，会显示img里面的图片
+16、<picture>
+  		<source type="image/svg+xml" srcset="pyramid.svg">
+  		<source type="image/webp" srcset="pyramid.webp"> 
+  		<img src="pyramid.png" alt="regular pyramid built from four equilateral triangles">
+	</picture>
+	在<source> 元素中，你只可以引用在type中声明的文件类型。
+
+  	
+		
