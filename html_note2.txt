@@ -11,4 +11,13 @@
 	</colgroup>
 5、<table><caption>表格标题</caption></table> caption标签可以为表格添加一个标题
 6、scope可以让某一列或者某一行关联更紧密，相当于添加注释
-	他拥有的属性有：row  col  colgroup 
+	他拥有的属性有：row  col  colgroup rowgroup
+7、替代scope属性可以使用id和headers属性来替代，每个单元格的headers属性需要包含它从属于的所有标题的id，之间用空格分隔开。如下：
+  <tr>
+    <th id="haircut">Haircut</th>   //id为haircut所以下面的headers都要有haircut
+    <td headers="location haircut">Hairdresser</td>
+    <td headers="date haircut">12/09</td>
+    <td headers="evaluation haircut">Great idea</td>
+    <td headers="cost haircut">30</td>
+  </tr>
+
