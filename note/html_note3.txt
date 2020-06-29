@@ -33,6 +33,6 @@ a:visited {
      transform: scale(2,1.5);  水平拉长两倍，垂直拉长1.5倍
      scaleX(value);  scaleY(value); 分别表示水平和垂直方向上的缩放倍数
   d、扭曲skew  和缩放和移动一样具有三种情况
-     transform: scale(30deg,10deg); 值分别是X轴和Y轴的扭曲角度
+     transform: scale(30deg,10deg);  值分别是X轴和Y轴的扭曲角度
 
 
