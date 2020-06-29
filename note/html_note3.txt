@@ -17,4 +17,4 @@ a:visited {
 4、body h1 + p .special {
 } //在<body>之内，紧接在<h1>后面的<p>元素的内部，类名为special。
 
-5
+5、
