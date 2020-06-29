@@ -24,7 +24,7 @@ a:visited {
  transform: rotate(0.8turn);
 6、transform的规则：
   a、旋转rotate：默认以元素的中心为基点进行一个2D旋转，值为角度，也可以通过transform-origin修改基点的位置
-  transform: rotate(30deg);
+     transform: rotate(30deg);
   b、移动translate：水平或上下的2D移动，以默认元素中心为坐标轴基点，有两个值表示移动的位置，translate(100px,20px);
      X轴向右为正，y轴向下为正
      translateX(value); 表示只在水平方向移动
@@ -34,5 +34,22 @@ a:visited {
      scaleX(value);  scaleY(value); 分别表示水平和垂直方向上的缩放倍数
   d、扭曲skew  和缩放和移动一样具有三种情况
      transform: scale(30deg,10deg);  值分别是X轴和Y轴的扭曲角度
+
+7、规则
+    要将额外的样式表导入主样式表，可以使用@import 
+    @import 'style.css'
+    用media创建样式表的一个部分，该部分只适用于视口大于30em的浏览器
+    @media (min-width: 30em){
+      body {
+        background-color:red;
+      }
+    }
+
+8、background: red url(bg-graphic.png) 10px 10px repeat-x fixed;这段代码和下段代码等价
+  background-color: red;
+  background-image: url(bg-graphic.png);
+  background-position: 10px 10px;
+  background-repeat: repeat-x;
+  background-scroll: fixed;
 
 
