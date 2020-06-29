@@ -1,3 +1,20 @@
 1、可一次使用多个选择器
  p, li , table, td {}
-2、
+2、选中每个 special 类的 li 元素
+  li.special {
+  } //special是class的值  选中所有类名为special的li元素
+  p span{
+  } //表示选中p标签下的span标签
+  h1 + p {
+  } //表示选中和h1相邻的下面的p标签
+
+3、用冒号可以作为状态选择器
+a:link {
+}  //表示没有访问过的连接的样式
+a:visited {
+}  //表示访问过的连接的样式
+
+4、body h1 + p .special {
+} //在<body>之内，紧接在<h1>后面的<p>元素的内部，类名为special。
+
+5
