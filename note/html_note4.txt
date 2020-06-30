@@ -1,0 +1,28 @@
+1、继承：
+  widths, margins, padding, 和 borders 都不会被继承； color会被继承；
+  可以对继承进行控制：
+  inherit  ：设置该属性会使子元素属性和父元素相同。实际上，就是 "开启继承".
+  initial  ：设置属性值和浏览器默认样式相同。如果浏览器默认样式中未设置且该属性是自然继承的，那么会设置为 inherit 。
+  unset    ：将属性重置为自然值，也就是如果属性是自然继承那么就是 inherit，否则和 initial一样
+继承的父属性的值就是上一级的父属性，并不是最高的父属性
+
+2、:nth-child(2) 表示其父元素的第二个子元素 如li:nth-child(2) 表示li的父元素的第二个子元素
+3、伪类选择器有哪些： :hover  :link  :visited  :first-child  :last-child  :nth-child  通常是单冒号的
+   伪元素选择器：  ::before/:before
+                  ::after/:after
+                  ::first-letter/:first-later
+                  ::first-line/:first-line   这些是单冒号或者双冒号的
+
+                  ::selection
+                  ::placeholder
+                  ::backdrop  仅双冒号
+4、属性选择器：[title=noob]  所有标题为noob的都被选择了
+5、!important 可以覆盖代码所在位置上面的所有优先级计算， 用于修改特定属性的值
+   #id {
+    background-color: red;
+   } //例如先通过id选择器设定了背景颜色，该元素有一个id = id和一个class = abc
+    .abc {
+      background-color: blue !important; //可以再通过!important来修改背景色
+    }
+
+

@@ -20,6 +20,7 @@
   <var>: 用于标记具体变量名。
   <kbd>: 用于标记输入电脑的键盘（或其他类型）输入。
   <samp>: 用于标记计算机程序的输出。
+  <blockquote> </blockquote> 一段文字块
 8、<time datatime=""> </time> 标记日期和时间
 9、<header>：页眉。
 	<nav>：导航栏。
