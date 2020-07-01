@@ -1,1 +1,29 @@
-1、
+1、块级盒子（block box）：除非特殊指定，诸如标题（h1）和段落（p）都是块级盒子
+    每个盒子都会换行，width和height都会发挥作用
+    内边距（padding）, 外边距（margin） 和 边框（border） 会将其他元素从当前盒子周围“推开”
+
+2、内联盒子（inline box）：用做链接的 <a> 元素、 <span>、 <em> 以及 <strong> 都是默认处于 inline 状态的。
+    盒子不会产生换行
+    width和height将不起作用
+    水平方向的内边距、外边距以及边框会被应用而且也会把其他处于 inline 状态的盒子推开，垂直方向不会。
+
+3、盒模型的各个部分：
+    Content box: 这个区域是用来显示内容，大小可以通过设置 width 和 height.
+    Padding box: 包围在内容区域外部的空白区域； 大小通过 padding 相关属性设置。
+    Border box: 边框盒包裹内容和内边距。大小通过 border 相关属性设置。
+    Margin box: 这是最外面的区域，是盒子和其他元素之间的空白区域。大小通过 margin 相关属性设置。
+4、标准盒模型：盒子的宽度和高度都需要加上padding和margin设置的值
+   默认的都是标准模型，如果需要使用替代盒模型需要设置  box-sizing: border-box;
+
+   替代盒模型：设置的宽度和高度都是border的值，内容宽度（content box）需要用width减去内边框外边框的值
+5、外边距、内边距、边框
+   外边距：margin 可以为正也可以为负
+          外边距折叠：当上面的块设置了margin-bottom,下面的块设置了margin-top,那么这两个值哪个大就是这两个块的距离
+          ，并不是相加
+   边框：border-top:      border-width   border-bottom-color
+        border-right     border-style   border-left-width
+        border-bottom    border-color
+        border-left
+   内边距:内边距和外边距不同，不能为负
+
+
