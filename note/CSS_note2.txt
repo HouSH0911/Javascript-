@@ -30,19 +30,35 @@
         border-left
    内边距:内边距和外边距不同，不能为负
 
-6、背景图片：
-    background-image: url("  ");
-   背景颜色：
-    background-color: blue;
-   控制背景平铺：
-    background-repeat: no-repeat — 不重复。
-    repeat-x —水平重复。
-    repeat-y —垂直重复。
-    repeat — 在两个方向重复。
-   背景图像定位:
-    background-position属性允许您选择背景图像显示在其应用到的盒子中的位置;
-      框的左上角是（0，0）
-    background-position: 20px 30px; 后面两个值就是X和Y的坐标值
+6、-背景图片：
+      background-image: url("  ");
+   -背景颜色：
+      background-color: blue;
+   -控制背景平铺：
+      background-repeat: no-repeat — 不重复。
+      repeat-x —水平重复。
+      repeat-y —垂直重复。
+      repeat — 在两个方向重复。
+   -背景图像定位:
+      background-position属性允许您选择背景图像显示在其应用到的盒子中的位置;
+        框的左上角是（0，0）
+      background-position: 20px 30px; 后面两个值就是X和Y的坐标值
+   -渐变背景：
+      可以通过background-image设置，用于背景时，和图像一样，通过网址https://cssgradient.io/获取渐变色彩，直接复制代码
+   -多个背景图像：
+      background-image: url(image1.png), url(image2.png);
+      background-repeat: no-repeat, repeat-x;  两个平铺属性也是和上面两个图片分别对应
+   -背景附加：
+      指定他们如何滚动时，内容滚动；通过background-attachment属性控制
+      background-attachment: scroll; 页面滚动时背景也滚动，滚动元素内容，背景不会移动
+      background-attachment: fixed; 页面或元素滚动时，背景不会移动。
+      background-attachment: local; 只在IE9+中支持，滚动元素时，背景也会滚动。
+
+
+
+
+
+
 
 
 
