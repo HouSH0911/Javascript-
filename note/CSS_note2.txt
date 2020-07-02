@@ -6,6 +6,10 @@
     盒子不会产生换行
     width和height将不起作用
     水平方向的内边距、外边距以及边框会被应用而且也会把其他处于 inline 状态的盒子推开，垂直方向不会。
+    display: inline-flex;
+    display: inline-block;  设置高度和宽度会生效，padding, margin, 以及border 会推开其他元素，但不会跳转到新行
+    display: flex;
+    display: block;  块级，可以设置宽度高度，margin和padding也可以使用
 
 3、盒模型的各个部分：
     Content box: 这个区域是用来显示内容，大小可以通过设置 width 和 height.
@@ -25,5 +29,21 @@
         border-bottom    border-color
         border-left
    内边距:内边距和外边距不同，不能为负
+
+6、背景图片：
+    background-image: url("  ");
+   背景颜色：
+    background-color: blue;
+   控制背景平铺：
+    background-repeat: no-repeat — 不重复。
+    repeat-x —水平重复。
+    repeat-y —垂直重复。
+    repeat — 在两个方向重复。
+   背景图像定位:
+    background-position属性允许您选择背景图像显示在其应用到的盒子中的位置;
+      框的左上角是（0，0）
+    background-position: 20px 30px; 后面两个值就是X和Y的坐标值
+
+
 
 
