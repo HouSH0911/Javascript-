@@ -53,7 +53,7 @@
       background-attachment: scroll; 页面滚动时背景也滚动，滚动元素内容，背景不会移动
       background-attachment: fixed; 页面或元素滚动时，背景不会移动。
       background-attachment: local; 只在IE9+中支持，滚动元素时，背景也会滚动。
-      back
+      
 
 
 
